@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andrey Palaev | Personal webpage</title>
+    <title>Andrei Palaev | Personal webpage</title>
     <style>
         body {
 			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -42,6 +42,48 @@
 		#research ul {
 			margin-top: 10px;
 		}
+		.pub-container {
+			display: flex;
+			gap: 20px;
+			margin-bottom: 40px;
+			align-items: flex-start;
+		}
+.pub-teaser {
+    flex: 0 0 220px;
+    width: 220px;
+    height: 140px;
+    background: #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+}
+.pub-teaser img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.pub-info {
+    flex: 1;
+}
+.pub-btn {
+    display: inline-block;
+    padding: 4px 12px;
+    margin: 10px 5px 0 0;
+    font-size: 0.85rem;
+    color: #444;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+.pub-btn:hover {
+    background: #f39c12;
+    color: white;
+    border-color: #f39c12;
+}
 		
 		
     </style>
@@ -79,20 +121,34 @@
 <section id="publications">
     <h2>Publications</h2>
     
-	<div class="pub-item">
-		<span class="pub-title">
-		LLM-guided Instance-level Image Manipulation with Diffusion U-Net Cross-Attention Maps
-		</span>
-		<span class="pub-venue">BMVC 2024</span>
-		<p>
-		Instance-level object manipulation using LLM-guided attention control in diffusion models.
-		</p>
-	</div>
+    <div class="pub-container">
+        <div class="pub-teaser">
+            <img src="assets/bmvc_2024.png" alt="BMVC 2024 Teaser">
+        </div>
+        <div class="pub-info">
+            <span class="pub-title">LLM-guided Instance-level Image Manipulation with Diffusion U-Net Cross-Attention Maps</span>
+            <span class="pub-venue">BMVC 2024</span>
+            <p>Instance-level object manipulation using LLM-guided attention control in diffusion models.</p>
+            <div class="pub-links">
+                <a href="https://arxiv.org/abs/2501.14046" class="pub-btn">Paper</a>
+                <a href="https://github.com/Palandr123/DiffusionU-NetLLM" class="pub-btn">Code</a>
+            </div>
+        </div>
+    </div>
 
-    <div class="pub-item">
-        <span class="pub-title">Exploring Semantic Variations in GAN Latent Spaces via Matrix Factorization</span>
-        <span class="pub-venue">ICLR 2023 Tiny Papers</span>
-        <p>Improved StyleGAN2 manipulations by replacing PCA with ICA.</p>
+    <div class="pub-container">
+        <div class="pub-teaser">
+            <img src="assets/iclr_2023.png" alt="ICLR 2023 Teaser">
+        </div>
+        <div class="pub-info">
+            <span class="pub-title">Exploring Semantic Variations in GAN Latent Spaces via Matrix Factorization</span>
+            <span class="pub-venue">ICLR 2023 Tiny Papers</span>
+            <p>Improved StyleGAN2 manipulations by replacing PCA with ICA..</p>
+            <div class="pub-links">
+                <a href="https://arxiv.org/abs/2305.14551" class="pub-btn">Paper</a>
+                <a href="https://github.com/Palandr123/exploring-gan-latent-spaces" class="pub-btn">Code</a>
+            </div>
+        </div>
     </div>
 </section>
 
